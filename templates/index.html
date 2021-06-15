@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<h1 class="mt-4">Text Classification</h1>
+<p>There are two models (Naive Bayes and Support Vector Machine) trained on the '20 Newsgroups dataset', where the 20 original categories have been combined into 6 new classes: Automotive, Computers, Politics, Religion, Science and Sports. More information on that can be found on the project's <a href="https://github.com/marcinhodor/text-classification" target="_blank">GitHub page</a>. The classifiers return predicted categories of the text provided in the input field below.</p>
+<form method="post" novalidate>
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    {{ form.textarea.label(class_="form-label") }} 
+
+    {{ form.textarea(class_="form-control", rows="10") }}
+
+    {% for error in form.textarea.errors %}
+    <span style="color: red">[{{ error }}]</span>
+    {% endfor %}
+  </div>
+  {{ form.submit(class_="btn btn-primary") }}
+</form>
+{% endblock %}
