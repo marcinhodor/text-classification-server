@@ -8,7 +8,7 @@ There are two models (Naive Bayes and Support Vector Machine) trained on the '20
 
 <hr>
 
-Application deployed under the following link: https://text-classification-mh.herokuapp.com/.
+Application deployed under the following link: ~~https://text-classification-mh.herokuapp.com/~~.
 
 Check out https://github.com/marcinhodor/text-classification for more information on the project.
 
